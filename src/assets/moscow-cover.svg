@@ -1,0 +1,24 @@
+<svg width="900" height="620" viewBox="0 0 900 620" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="620" rx="28" fill="#0B0A10"/>
+  <path d="M0 80H900M0 160H900M0 240H900M0 320H900M0 400H900M0 480H900M0 560H900M80 0V620M160 0V620M240 0V620M320 0V620M400 0V620M480 0V620M560 0V620M640 0V620M720 0V620M800 0V620" stroke="#26202A" stroke-width="1"/>
+  <rect x="56" y="56" width="788" height="508" rx="22" fill="#101019" stroke="#37313D" stroke-width="2"/>
+  <rect x="86" y="86" width="315" height="448" rx="18" fill="#15141E" stroke="#302B38"/>
+  <text x="112" y="128" fill="#D3EEF9" font-family="monospace" font-size="20">MOSCOW / DISCOVER</text>
+  <text x="112" y="170" fill="#F20941" font-family="sans-serif" font-weight="700" font-size="34">Город — это</text>
+  <text x="112" y="209" fill="#F20941" font-family="sans-serif" font-weight="700" font-size="34">приключение.</text>
+  <rect x="112" y="240" width="260" height="102" rx="12" fill="#1B1B29"/>
+  <circle cx="148" cy="274" r="13" fill="#19EA76"/><path d="M143 274L147 278L154 269" stroke="#050408" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="172" y="276" fill="#D3EEF9" font-family="sans-serif" font-size="16" font-weight="600">Маршрут открыт</text>
+  <text x="132" y="310" fill="#A29BAA" font-family="sans-serif" font-size="13">3 места · 45 минут</text>
+  <rect x="112" y="362" width="260" height="70" rx="12" fill="#F20941"/>
+  <text x="136" y="404" fill="#050408" font-family="sans-serif" font-size="18" font-weight="700">Начать квест ↗</text>
+  <text x="112" y="480" fill="#8C8593" font-family="monospace" font-size="12">CONCEPT / DESIGN / STORY</text>
+  <rect x="426" y="86" width="388" height="448" rx="18" fill="#101923" stroke="#302B38"/>
+  <path d="M452 136L524 188L596 145L658 230L760 176M458 294L535 350L610 304L690 390L788 328M478 450L540 400L626 446L720 404L778 466" stroke="#1180D0" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" opacity=".8"/>
+  <path d="M524 188L535 350L626 446" stroke="#19EA76" stroke-width="4" stroke-dasharray="8 10"/>
+  <circle cx="524" cy="188" r="16" fill="#F20941" stroke="#D3EEF9" stroke-width="4"/>
+  <circle cx="535" cy="350" r="14" fill="#19EA76" stroke="#D3EEF9" stroke-width="4"/>
+  <circle cx="626" cy="446" r="18" fill="#862298" stroke="#D3EEF9" stroke-width="4"/>
+  <rect x="640" y="104" width="140" height="40" rx="20" fill="#050408" stroke="#F20941"/><text x="660" y="129" fill="#D3EEF9" font-family="monospace" font-size="13">QUEST 01</text>
+  <text x="456" y="508" fill="#D3EEF9" font-family="monospace" font-size="13">EXPLORE · PLAY · REMEMBER</text>
+</svg>

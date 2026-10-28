@@ -1,0 +1,21 @@
+<svg width="900" height="620" viewBox="0 0 900 620" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="620" rx="28" fill="#08070B"/>
+  <path d="M0 80H900M0 160H900M0 240H900M0 320H900M0 400H900M0 480H900M0 560H900M80 0V620M160 0V620M240 0V620M320 0V620M400 0V620M480 0V620M560 0V620M640 0V620M720 0V620M800 0V620" stroke="#1D1720" stroke-width="1"/>
+  <rect x="52" y="48" width="796" height="524" rx="22" fill="#100D15" stroke="#3C1725" stroke-width="2"/>
+  <text x="88" y="98" fill="#D3EEF9" font-family="monospace" font-size="19">ANTIFRAUD / SIGNAL ANALYSIS</text>
+  <rect x="88" y="128" width="724" height="116" rx="14" fill="#19131D" stroke="#402130"/>
+  <text x="112" y="166" fill="#9B8E9B" font-family="monospace" font-size="14">RISK INDICATOR</text>
+  <text x="112" y="211" fill="#F20941" font-family="sans-serif" font-size="40" font-weight="700">HIGH RISK</text>
+  <rect x="558" y="158" width="220" height="14" rx="7" fill="#32202B"/><rect x="558" y="158" width="172" height="14" rx="7" fill="#F20941"/>
+  <text x="558" y="199" fill="#D3EEF9" font-family="monospace" font-size="13">SIGNAL DETECTED</text>
+  <text x="88" y="286" fill="#D3EEF9" font-family="monospace" font-size="16">CALL PATTERN / RELATION GRAPH</text>
+  <g stroke="#1180D0" stroke-width="3" opacity=".9">
+    <path d="M176 365L294 324L414 382L545 320L678 364L760 306"/>
+    <path d="M294 324L318 454L457 476L545 320"/>
+    <path d="M414 382L457 476L678 364"/>
+    <path d="M176 365L208 475L318 454"/>
+  </g>
+  <g fill="#050408" stroke="#19EA76" stroke-width="5"><circle cx="176" cy="365" r="20"/><circle cx="294" cy="324" r="20"/><circle cx="414" cy="382" r="20"/><circle cx="545" cy="320" r="20"/><circle cx="678" cy="364" r="20"/><circle cx="760" cy="306" r="20"/><circle cx="318" cy="454" r="20"/><circle cx="457" cy="476" r="20"/><circle cx="208" cy="475" r="20"/></g>
+  <circle cx="414" cy="382" r="31" stroke="#F20941" stroke-width="4"/>
+  <text x="88" y="538" fill="#7C717F" font-family="monospace" font-size="12">METADATA-BASED · NO CALL RECORDINGS</text>
+</svg>
