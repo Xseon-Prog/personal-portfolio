@@ -118,7 +118,18 @@ img { display: block; max-width: 100%; }
 .section-intro { max-width: 395px; color: #9e97a6; font-size: 13px; line-height: 1.85; margin: 0 0 4px; }
 .capability-grid { display: grid; grid-template-columns: repeat(5, minmax(0,1fr)); gap: 13px; }
 .capability-card { position: relative; padding: 19px 17px 24px; min-height: 182px; border: 1px solid var(--line); border-radius: 12px; background: linear-gradient(150deg, rgba(18,16,25,.92), rgba(8,7,12,.88)); transition: transform .22s ease, border-color .22s ease, background .22s ease; overflow: hidden; }
-.capability-card::after { content: ''; position: absolute; width: 100px; height: 100px; filter: blur(38px); opacity: .08; right: -40px; bottom: -40px; border-radius: 50%; background: var(--pink); }
+.capability-card::after {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  filter: blur(38px);
+  opacity: .08;
+  right: -40px;
+  bottom: -40px;
+  border-radius: 50%;
+  background: var(--pink);
+}
 .capability-card:hover { transform: translateY(-4px); border-color: rgba(242,9,65,.5); background: linear-gradient(150deg, rgba(26,14,24,.94), rgba(8,7,12,.9)); }
 .capability-card .capability-top { display: flex; justify-content: space-between; align-items: center; color: #6e6676; font: 9px var(--mono); }
 .capability-card .capability-top svg { color: var(--pink); }
@@ -142,7 +153,13 @@ img { display: block; max-width: 100%; }
 .project-cover::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(5,4,8,.12), transparent 45%, rgba(5,4,8,.28)); pointer-events: none; }
 .project-cover img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
 .project-card:hover .project-cover img { transform: scale(1.035); }
-.project-cover-link:has(img[src*="office-bot"]) .project-cover img { object-fit: cover; object-position: top; }
+.project-cover-link:has(img[src*="moscow"]) .project-cover img,
+.project-cover-link:has(img[src*="office-bot"]) .project-cover img {
+  object-fit: contain;
+  object-position: center;
+  padding: 8px;
+  background: #050408;
+}
 .cover-number { position: absolute; z-index: 1; top: 12px; left: 13px; font: 9px var(--mono); letter-spacing: .1em; color: var(--ice); background: rgba(5,4,8,.66); border: 1px solid rgba(211,238,249,.16); border-radius: 5px; padding: 6px 8px; }
 .cover-open { position: absolute; z-index: 2; bottom: 12px; right: 12px; display: grid; place-items: center; width: 35px; height: 35px; border-radius: 50%; color: #fff; background: var(--pink); box-shadow: 0 0 25px rgba(242,9,65,.3); }
 .project-card-body { padding: 19px 19px 16px; }
@@ -245,8 +262,18 @@ img { display: block; max-width: 100%; }
 .detail-intro h1 { overflow-wrap:anywhere; }
 .detail-intro .inner-lead { color:var(--ice); }
 .detail-tags { margin:20px 0; }
-.detail-cover { position:relative; border:1px solid rgba(242,9,65,.25); background:#0a090e; border-radius:13px; overflow:hidden; min-width:0; }
-.detail-cover img { width:100%; aspect-ratio:1.25; object-fit:cover; }
+.detail-cover {
+  position: relative;
+  border: 1px solid rgba(242, 9, 65, 0.25);
+  background-color: #0a090e;
+  background-image:
+    linear-gradient(rgba(211, 238, 249, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(211, 238, 249, 0.055) 1px, transparent 1px);
+  background-size: 52px 52px;
+  border-radius: 13px;
+  overflow: hidden;
+  min-width: 0;
+}
 .detail-cover-mark { position:absolute; bottom:13px; left:13px; padding:7px 9px; border-radius:5px; border:1px solid rgba(211,238,249,.15); background:rgba(5,4,8,.78); color:var(--ice); font:9px var(--mono); letter-spacing:.08em; }
 .detail-actions { display:flex; flex-wrap:wrap; gap:9px; margin-top:25px; }
 .detail-actions .button { min-height:40px; font-size:10px; }
@@ -433,5 +460,42 @@ img { display: block; max-width: 100%; }
   *, *::before, *::after { scroll-behavior:auto !important; animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; }
 }
 
-.project-card.green .project-cover img { object-fit: contain; padding: 7px; }
-.detail-cover img[src*="office-bot"] { object-fit: contain; padding: 14px; background: #050408; }
+.project-card.green .project-cover { background: #fff; }
+.project-card.green .project-cover img { object-fit: contain; padding: 0; }
+.detail-cover img[src*="moscow"],
+.detail-cover img[src*="office-bot"] {
+  object-fit: contain;
+  object-position: center;
+  padding: 14px;
+  background: transparent;
+}
+.project-cover-link:has(img[src*="moscow-card-cover"]) .project-cover img,
+.project-cover-link:has(img[src*="office-bot-card"]) .project-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  padding: 0;
+  background: transparent;
+}
+/* Уменьшаем изображения на страницах проектов */
+.detail-cover img[src*="moscow"],
+.detail-cover img[src*="office-bot"] {
+  display: block;
+  width: 100%;
+  height: 500px;
+  aspect-ratio: auto;
+  object-fit: contain;
+  object-position: center;
+  padding: 18px;
+  background: transparent;
+}
+
+/* На мобильных экранах */
+@media (max-width: 640px) {
+  .detail-cover img[src*="moscow"],
+  .detail-cover img[src*="office-bot"] {
+    height: 400px;
+    padding: 10px;
+  }
+}

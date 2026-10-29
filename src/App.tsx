@@ -6,11 +6,14 @@ import {
   Presentation, Rocket, Send, Sparkles, Trophy, X, Layers, Plus,
 } from 'lucide-react'
 import avatar from './assets/avatar.png'
-import moscowCover from './assets/moscow-cover.svg'
+import moscowCover from './assets/moscow-cover.jpg'
 import antiFraudCover from './assets/antifraud-cover.svg'
-import officeBot from './assets/office-bot.png'
+import officeBot from './assets/office-bot.jpg'
+import moscowCardCover from './assets/moscow-card-cover.jpg'
+import officeBotCard from './assets/office-bot-card.png'
 
 type Project = {
+  cardCover?: string
   slug: string
   number: string
   title: string
@@ -29,7 +32,7 @@ type Project = {
 const projects: Project[] = [
   {
     slug: 'moscow-realtime', number: '01', title: 'MoscowRealtime',
-    subtitle: 'Город как приключение', category: 'Мобильный продукт', cover: moscowCover,
+    subtitle: 'Город как приключение', category: 'Мобильный продукт', cover: moscowCover,cardCover: moscowCardCover,
     accent: 'blue',
     summary: 'Концепция мобильного приложения для цифрового городского туризма: маршруты, достопримечательности и игровые квесты в одном пользовательском опыте.',
     role: ['Разработка первоначальной идеи и концепции', 'Проектирование структуры и логики продукта', 'Визуальное оформление и презентация проекта', 'Участие в обсуждении архитектуры и развёртывания'],
@@ -53,7 +56,7 @@ const projects: Project[] = [
   },
   {
     slug: 'office-bot', number: '03', title: 'Office Check Bot',
-    subtitle: 'Ежедневная проверка в офисе', category: 'Бот · Автоматизация', cover: officeBot,
+    subtitle: 'Ежедневная проверка в офисе', category: 'Бот · Автоматизация', cover: officeBot, cardCover: officeBotCard,
     accent: 'green',
     summary: 'Бот-напоминание для ежедневных отметок сотрудников: помогает не забыть отметиться и упрощает повторяющийся офисный процесс.',
     role: ['Идея и сценарий работы', 'Проектирование процесса ежедневных отметок', 'Подготовка визуальных материалов'],
@@ -140,7 +143,7 @@ function Capabilities() {
 
 function ProjectCard({ project }: { project: Project }) {
   return <article className={`project-card ${project.accent}`}>
-    <Link to={`/projects/${project.slug}`} className="project-cover-link" aria-label={`Подробнее о проекте ${project.title}`}><div className="project-cover"><img src={project.cover} alt={`Визуализация проекта ${project.title}`} /> <span className="cover-number">PROJECT / {project.number}</span><span className="cover-open"><ArrowUpRight size={20}/></span></div></Link>
+    <Link to={`/projects/${project.slug}`} className="project-cover-link" aria-label={`Подробнее о проекте ${project.title}`}><div className="project-cover"><img src={project.cardCover ?? project.cover} alt={`Визуализация проекта ${project.title}`} /> <span className="cover-number">PROJECT / {project.number}</span><span className="cover-open"><ArrowUpRight size={20}/></span></div></Link>
     <div className="project-card-body"><div className="project-card-meta"><span>{project.category}</span><span>{project.number}</span></div><h3><Link to={`/projects/${project.slug}`}>{project.title}</Link></h3><p>{project.summary}</p><div className="tag-list">{project.tags.slice(0, 3).map(tag => <span className="tag" key={tag}>{tag}</span>)}</div><div className="project-card-footer"><Link className="text-link" to={`/projects/${project.slug}`}>Посмотреть кейс <ArrowUpRight size={16}/></Link>{project.links.length > 0 && <a className="icon-link" target="_blank" rel="noreferrer" href={project.links[0].href} aria-label={`Открыть репозиторий ${project.title}`}><Github size={17}/></a>}</div></div>
   </article>
 }
